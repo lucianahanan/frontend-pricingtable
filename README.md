@@ -15,12 +15,12 @@
 
 I wrote from scratch all code without any video reference.
 
-In CSS, along with Sass, I'm using colors variables, viewport breakpoints, REM sizes, CSS reset, media queries, flexbox and grid.
+In CSS, along with Sass, I'm using colors variables, viewport breakpoints, REM sizes, CSS reset, media queries and flexbox.
 
 <h3>Plus:</h3>
 <p>I added Sass to the project to help me on some CSS settings.</p>
-<p>On this project, the design asked for a responsive code for desktop and mobile, showing the number of columns according to the viewport width.</p>
-<p>There wasn't any mention about accessibility, but I decided to add it just for fun, with tabindexes in a logical order. Then also added some hover effects and a different outline color for the buttons, to help on the accessibility experience.</p>
+<p>On this project, the design required a responsive code for desktop and mobile, showing the number of columns according to the viewport size.</p>
+<p>There wasn't any mention about accessibility, but I decided to add it, with tabindexes in a logical order. Then I also created some hover effects and defined a different outline color for the buttons, to help on the accessibility experience.</p>
 
 <h2>Example Images</h2>
 <p>Desktop<br>
