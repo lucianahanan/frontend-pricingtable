@@ -1,0 +1,260 @@
+/*---------- resets ----------*/
+* {
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  margin: 0;
+  padding-block: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+img {
+  border: 0;
+}
+
+/*---------- globals ----------*/
+:root {
+  --background: #f9fbfc;
+  --border: #eeeeee;
+  --primary: #1d539e;
+  --primarydark: #1e2338;
+  --secondary: #ffcc29;
+  --text: #828799;
+  --white: #ffffff;
+}
+
+body {
+  align-items: center;
+  background-color: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.9rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  color: var(--white);
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 6.53rem;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  color: var(--text);
+  font-size: clamp(1.2rem, 5vw, 1.4rem);
+  line-height: 1.4rem;
+}
+
+p.header {
+  color: var(--white);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 6.9rem;
+  text-align: center;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 400;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+a strong {
+  font-weight: 600;
+}
+
+ul {
+  font-weight: 600;
+}
+
+li {
+  margin-bottom: 2rem;
+}
+
+hr {
+  background-color: var(--border);
+  border: 0;
+  display: inline-block;
+  height: 1px;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+button {
+  background-color: var(--primary);
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.72rem;
+  padding: 1.2rem 2.4rem;
+  text-transform: uppercase;
+  transition: 200ms;
+  white-space: nowrap;
+  width: 100%;
+}
+button:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+button:focus {
+  outline: 4px solid var(--secondary);
+}
+
+/*---------- header --------------------------------------------------*/
+header {
+  background-color: var(--primary);
+  height: 45rem;
+  text-align: center;
+  width: 100%;
+  /*---------------------------*/
+}
+@media (max-width: 1000px) {
+  header {
+    padding: 0 4rem;
+  }
+}
+header h1 {
+  margin-top: 10rem;
+}
+
+/*---------- main --------------------------------------------------*/
+main {
+  display: flex;
+  margin-top: -13.8rem;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/*---------- prices --------------------------------------------------*/
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 110.5rem;
+  padding-bottom: 8rem;
+  margin-top: -14rem;
+}
+
+.price {
+  background-color: var(--white);
+  border-radius: 0.8rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(142, 150, 185, 0.25);
+  flex-grow: 1;
+  max-width: 32%;
+  min-height: 47rem;
+  min-width: 35.5rem;
+  padding: 3rem;
+  position: relative;
+  /*---------------------------*/
+}
+@media (max-width: 480px) {
+  .price {
+    max-width: 80%;
+  }
+}
+@media (max-width: 380px) {
+  .price {
+    min-width: 22rem;
+  }
+}
+.price h2 {
+  border-radius: 0.8rem 0.8rem 0 0;
+  color: var(--primarydark);
+  height: 7.6rem;
+  height: 7.6rem;
+  left: 0;
+  padding-top: 2.5rem;
+  padding: 2.4rem 3rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.price h2 + p {
+  margin-bottom: 1.5rem;
+  margin-top: 7.5rem;
+}
+.price ul li:before {
+  background: url(./assets/check.svg) no-repeat 0 0;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  padding-left: 10px;
+  vertical-align: middle;
+  width: 20px;
+}
+.price .amount {
+  color: var(--primarydark);
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+.price .cents {
+  color: var(--primarydark);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.price .bottom button {
+  bottom: 3rem;
+  position: absolute;
+  text-align: center;
+  width: calc(100% - 6rem);
+}
+
+.price.featured h2 {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+.price.featured h2 button {
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  max-width: 9.4rem;
+  padding: 0.8rem 2.4rem;
+  position: absolute;
+  right: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  top: 2.2rem;
+}
